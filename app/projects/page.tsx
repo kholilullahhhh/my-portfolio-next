@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Footer } from '@/components/common/footer';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { projects } from '@/lib/data';
@@ -22,8 +23,8 @@ export default function ProjectsPage() {
   );
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,6 +216,7 @@ export default function ProjectsPage() {
           </DialogContent>
         </Dialog>
       </div>
+      <Footer />
     </div>
   );
 }

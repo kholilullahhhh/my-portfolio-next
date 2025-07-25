@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Footer } from '@/components/common/footer';
 import { z } from 'zod';
 import { Send, Mail, MapPin, Phone, Clock, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -88,8 +89,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -323,6 +324,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

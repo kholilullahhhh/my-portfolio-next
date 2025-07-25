@@ -12,7 +12,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-muted-foreground">
             <p className="flex items-center gap-1">
-              © {currentYear} Made with <Heart className="h-4 w-4 text-red-500" /> by Your Name
+              © {currentYear} Made with <Heart className="h-4 w-4 text-red-500" /> Luluuu
             </p>
           </div>
           

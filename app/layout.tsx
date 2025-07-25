@@ -9,30 +9,30 @@ import { Footer } from '@/components/common/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'John Doe - Full Stack Developer Portfolio',
+  title: 'Muhammad Kholilullah - Full Stack Developer Portfolio',
   description: 'Professional portfolio showcasing modern web development projects, skills, and expertise in React, Next.js, TypeScript, and more.',
   keywords: ['Full Stack Developer', 'React', 'Next.js', 'TypeScript', 'Web Development', 'Portfolio'],
-  authors: [{ name: 'John Doe' }],
-  creator: 'John Doe',
+  authors: [{ name: 'Muhammad Kholilullah' }],
+  creator: 'Muhammad Kholilullah',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://johndoe.dev',
-    title: 'John Doe - Full Stack Developer Portfolio',
+    title: 'Muhammad Kholilullah - Full Stack Developer Portfolio',
     description: 'Professional portfolio showcasing modern web development projects and expertise.',
-    siteName: 'John Doe Portfolio',
+    siteName: 'Muhammad Kholilullah Portfolio',
     images: [
       {
         url: 'https://placehold.co/1200x630/6366F1/FFFFFF?text=John+Doe+Portfolio',
         width: 1200,
         height: 630,
-        alt: 'John Doe - Full Stack Developer Portfolio',
+        alt: 'Muhammad Kholilullah - Full Stack Developer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'John Doe - Full Stack Developer Portfolio',
+    title: 'Muhammad Kholilullah - Full Stack Developer Portfolio',
     description: 'Professional portfolio showcasing modern web development projects and expertise.',
     images: ['https://placehold.co/1200x630/6366F1/FFFFFF?text=John+Doe+Portfolio'],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'John Doe',
+  name: 'Muhammad Kholilullah',
   jobTitle: 'Full Stack Developer',
   description: 'Experienced full stack developer specializing in React, Next.js, and modern web technologies.',
   url: 'https://johndoe.dev',
@@ -66,7 +66,7 @@ const jsonLd = {
     'Next.js',
     'TypeScript',
     'Node.js',
-    'Python',
+    'Laravel',
     'Web Development',
     'Software Engineering',
   ],
