@@ -13,14 +13,14 @@ const highlights = [
     label: "SMA Negeri 9 Gowa",
     year: "2020 - 2023",
     description:
-      "Graduated with a focus on Science and Mathematics. Developed a strong foundation in analytical thinking and problem-solving skills. Participated in various science fairs and coding competitions, enhancing my interest in technology.",
+      "Graduated with a focus on Science and Mathematics. Developed a strong foundation in analytical thinking and problem-solving skills.",
   },
   {
     icon: Award,
     label: "Universitas DIPA Makassar",
     year: "2023 - Present",
     description:
-      "Specialized in Software Engineering with a strong emphasis on Back-End Development. Studied core subjects such as Data Structures, Algorithms, Object-Oriented Programming, and Software Engineering. Actively engaged in hackathons and coding contests to enhance practical skills.",
+      "Specialized in Software Engineering with a strong emphasis on Back-End Development. Studied core subjects such as Data Structures, Algorithms, Object-Oriented Programming, and Software Engineering.",
   },
 ];
 
@@ -71,42 +71,13 @@ export default function AboutPage() {
         >
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">About Me</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Passionate full-stack developer with expertise in modern web
-            technologies and a keen eye for exceptional user experiences. I
-            believe in creating digital solutions that make a real difference.
+            I am a passionate full-stack developer and an active student at
+            <strong> Universitas Dipa Makassar</strong>, majoring in
+            <strong> Informatics Engineering</strong>. With a strong foundation
+            in both front-end and back-end development, I enjoy building modern,
+            scalable web applications that not only work well but also provide
+            excellent user experiences.
           </p>
-        </motion.div>
-
-        {/* Highlights Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="pt-8 mb-16"
-        >
-          <h2 className="text-3xl font-bold mb-6">Education</h2>{" "}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {highlights.map((highlight, index) => (
-              <motion.div
-                key={highlight.label}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                className="border-l-4 border-primary/20 pl-4"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <highlight.icon className="w-5 h-5 text-primary" />
-                  <h4 className="font-semibold text-lg">{highlight.label}</h4>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {highlight.year}
-                </p>
-                <p className="mt-2 text-muted-foreground">
-                  {highlight.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 mb-16">
@@ -120,22 +91,22 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">My Journey</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                My journey into web development began in 2019 when I discovered
-                the power of code to bring ideas to life. What started as
-                curiosity quickly became a passion for creating digital
-                experiences that solve real problems.
+                Hi, my name is Muhammad Kholilullah. My journey into software
+                development began in 2022, driven by a deep curiosity about how
+                websites and digital products are created.
               </p>
               <p>
-                Over the years, I've had the privilege of working with diverse
-                teams and clients, from early-stage startups to established
-                enterprises. Each project has taught me something new and
-                reinforced my belief that great software is built through
-                collaboration, attention to detail, and continuous learning.
+                As a student of Informatics Engineering at{" "}
+                <strong>Universitas Dipa Makassar</strong>, I've had the
+                opportunity to deepen my understanding of software development,
+                from algorithms and data structures to back-end systems and
+                user-centered design.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open source projects, or sharing knowledge with
-                the developer community through blog posts and mentoring.
+                Outside of academic life, I enjoy exploring new technologies,
+                contributing to open source, and connecting with the developer
+                community through online platforms and mentoring others who are
+                just starting out in tech.
               </p>
             </div>
           </motion.div>
@@ -180,6 +151,38 @@ export default function AboutPage() {
             </Card>
           </motion.div>
         </div>
+
+        {/* Highlights Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="pt-8 mb-16"
+        >
+          <h2 className="text-3xl font-bold mb-6">Education</h2>{" "}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {highlights.map((highlight, index) => (
+              <motion.div
+                key={highlight.label}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                className="border-l-4 border-primary/20 pl-4"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <highlight.icon className="w-5 h-5 text-primary" />
+                  <h4 className="font-semibold text-lg">{highlight.label}</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {highlight.year}
+                </p>
+                <p className="mt-2 text-muted-foreground">
+                  {highlight.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Timeline */}
         <motion.div
