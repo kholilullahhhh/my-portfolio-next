@@ -3,41 +3,42 @@ import { Project, Skill, Testimonial } from "@/types";
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-Commerce Platform",
-    description: "Modern e-commerce solution with advanced features",
+    title: "Personal Portofolio",
+    description: "A modern, responsive portfolio built with Next.js",
     longDescription:
-      "A comprehensive e-commerce platform built with Next.js, featuring real-time inventory management, advanced search functionality, payment integration, and admin dashboard. The platform handles high traffic loads and provides seamless user experience across all devices.",
-    image:
-      "https://placehold.co/600x400/6366F1/FFFFFF?text=E-Commerce+Platform",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis"],
+      "A personal portfolio website developed using Next.js to showcase my projects, skills, and experiences. The site features a responsive design, smooth page transitions, dynamic content rendering, and SEO optimization. Built from scratch, this portfolio serves as a central hub for my professional presence and highlights my frontend development capabilities.",
+    image: "/portfolio.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn"],
     category: "web",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: true,
-  },
-  {
-    id: "3",
-    title: "Mobile Banking App",
-    description: "Secure mobile banking solution with biometric auth",
-    longDescription:
-      "A secure mobile banking application featuring biometric authentication, real-time transaction monitoring, budget tracking, and investment portfolio management. Built with React Native and implements industry-standard security protocols.",
-    image: "https://placehold.co/600x400/F59E0B/FFFFFF?text=Banking+App",
-    technologies: ["React Native", "Node.js", "MongoDB", "JWT", "Plaid API"],
-    category: "mobile",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://luluuu.vercel.app/",
+    githubUrl: "https://github.com/kholilullahhhh/my-portfolio-next",
     featured: false,
   },
   {
-    id: "4",
-    title: "Design System Library",
-    description: "Comprehensive component library and design system",
+    id: "2",
+    title: "Mobile DCC",
+    description: "React Native mobile app for Dipanegara Computer Club.",
     longDescription:
-      "A scalable design system and component library used across multiple products. Includes design tokens, accessible components, comprehensive documentation, and automated testing to ensure consistency and quality.",
-    image: "https://placehold.co/600x400/8B5CF6/FFFFFF?text=Design+System",
-    technologies: ["React", "Storybook", "TypeScript", "CSS-in-JS", "Jest"],
-    category: "design",
-    githubUrl: "https://github.com",
+      "Developed the official DCC mobile app using React Native and Laravel to centralize club resources for 200+ members. Optimized API performance for slow networks and implemented offline video caching, reducing student data usage by 40% compared to web platforms.",
+    image: "/mobileDCC.png",
+    technologies: ["React Native", "JavaScript", "Go", "Axios", "RESTful API"],
+    category: "mobile",
+    liveUrl: "#",
+    githubUrl: "#",
+    featured: false,
+  },
+  {
+    id: "3",
+    title: "Sistem Pembayaran SPP",
+    description:
+      "A digital SPP payment system integrated with Midtrans gateway",
+    longDescription:
+      "A web-based SPP payment system designed to streamline tuition fee transactions. Integrated with the Midtrans payment gateway, it supports various payment methods, provides real-time status updates, and ensures secure, seamless transactions for students and administrators.",
+
+    image: "/midtrans.png",
+    technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
+    category: "web",
+    githubUrl: "https://github.com/kholilullahhhh/Spp-paymantGateway-midtrans",
     featured: false,
   },
 ];
