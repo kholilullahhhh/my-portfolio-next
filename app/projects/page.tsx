@@ -12,7 +12,7 @@ import { projects } from '@/lib/data';
 import { Project } from '@/types';
 import Image from 'next/image';
 
-const categories = ['all', 'web', 'mobile', 'data', 'design'];
+const categories = ['all', 'web', 'mobile', 'design'];
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');

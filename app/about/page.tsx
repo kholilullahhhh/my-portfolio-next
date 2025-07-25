@@ -45,13 +45,7 @@ const techStack = [
 ];
 
 const timeline = [
-  {
-    year: "2024 - 2025 ",
-    title: "Network Technician",
-    company: "PT. BANGSAWAN CYBER INDO",
-    description:
-      "Built scalable web applications and mentored junior developers.",
-  },
+  
   {
     
     year: "2023 - Present",
@@ -59,6 +53,13 @@ const timeline = [
     company: "Freelance Software Engineer",
     description:
       "Freelance Software Engineer building web apps with Next.js and Laravel, and mobile apps with React Native.",
+  },
+  {
+    year: "2024 - 2025 ",
+    title: "Network Technician",
+    company: "PT. BANGSAWAN CYBER INDO",
+    description:
+      "Contract Network Technician for CPNS exam rooms, handling network installation and setup in August 2024 and May 2025.",
   },
 ];
 

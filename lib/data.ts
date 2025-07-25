@@ -16,19 +16,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "2",
-    title: "AI Dashboard Analytics",
-    description: "Data visualization dashboard with AI insights",
-    longDescription:
-      "An intelligent analytics dashboard that leverages machine learning to provide actionable insights. Features real-time data processing, customizable widgets, and predictive analytics to help businesses make data-driven decisions.",
-    image: "https://placehold.co/600x400/10B981/FFFFFF?text=AI+Dashboard",
-    technologies: ["React", "D3.js", "Python", "TensorFlow", "FastAPI"],
-    category: "data",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: true,
-  },
-  {
     id: "3",
     title: "Mobile Banking App",
     description: "Secure mobile banking solution with biometric auth",
@@ -63,37 +50,4 @@ export const skills: Skill[] = [
   { name: "PostgreSQL", proficiency: 75, category: "backend" },
   { name: "Laravel", proficiency: 70, category: "backend" },
   { name: "Figma", proficiency: 85, category: "design" },
-];
-
-export const testimonials: Testimonial[] = [
-  {
-    id: "1",
-    name: "Sarah Johnson",
-    role: "Product Manager",
-    company: "TechCorp",
-    content:
-      "Outstanding work on our e-commerce platform. The attention to detail and technical expertise exceeded our expectations. Delivered on time and within budget.",
-    avatar: "https://placehold.co/100x100/6366F1/FFFFFF?text=SJ",
-    rating: 5,
-  },
-  {
-    id: "2",
-    name: "Michael Chen",
-    role: "CTO",
-    company: "DataFlow Inc",
-    content:
-      "Exceptional developer with deep understanding of modern web technologies. The analytics dashboard transformed how we visualize our data.",
-    avatar: "https://placehold.co/100x100/10B981/FFFFFF?text=MC",
-    rating: 5,
-  },
-  {
-    id: "3",
-    name: "Emily Rodriguez",
-    role: "Design Director",
-    company: "Creative Studio",
-    content:
-      "Perfect blend of technical skills and design sensibility. The user experience is intuitive and the code quality is exceptional.",
-    avatar: "https://placehold.co/100x100/F59E0B/FFFFFF?text=ER",
-    rating: 5,
-  },
 ];
