@@ -27,21 +27,21 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@johndoe.dev',
+    value: 'eunjungeunjung7 @gmail.com',
     href: 'mailto:hello@johndoe.dev',
     description: 'Send me an email anytime',
   },
   {
     icon: Phone,
     title: 'Phone',
-    value: '+1 (555) 123-4567',
+    value: '+62 953-147-8473',
     href: 'tel:+15551234567',
     description: 'Mon-Fri from 9am to 6pm',
   },
   {
     icon: MapPin,
     title: 'Location',
-    value: 'San Francisco, CA',
+    value: 'Makassar, South Sulawesi, Indonesia',
     href: null,
     description: 'Available for remote work',
   },
@@ -250,7 +250,7 @@ export default function ContactPage() {
                         id="email"
                         type="email"
                         {...register('email')}
-                        placeholder="your@email.com"
+                        placeholder="Your email address"
                         className="mt-2"
                         disabled={isSubmitting}
                       />

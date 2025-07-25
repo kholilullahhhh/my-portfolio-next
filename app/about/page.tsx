@@ -5,22 +5,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Footer } from "@/components/common/footer";
 import { Badge } from "@/components/ui/badge";
 
-import { Calendar, MapPin, Award, Users } from "lucide-react";
+import { Building2, GraduationCapIcon, School } from "lucide-react";
 
 const highlights = [
   {
-    icon: Calendar,
+    icon: School,
     label: "SMA Negeri 9 Gowa",
     year: "2020 - 2023",
     description:
       "Graduated with a focus on Science and Mathematics. Developed a strong foundation in analytical thinking and problem-solving skills.",
   },
   {
-    icon: Award,
+    icon: GraduationCapIcon,
     label: "Universitas DIPA Makassar",
     year: "2023 - Present",
     description:
-      "Specialized in Software Engineering with a strong emphasis on Back-End Development. Studied core subjects such as Data Structures, Algorithms, Object-Oriented Programming, and Software Engineering.",
+      "Focused on Software Engineering, especially Back-End Development, as a student in Informatics Engineering. Learned key topics like Data Structures, Algorithms, OOP, and Software Development.",
+  },
+];
+const Organization = [
+  {
+    icon: Building2,
+    label: "Dipanegra Computer Club",
+    year: "2024 - present",
+    description:
+      "As a member of Dipanegara Computer Club — a student organization at Universitas Dipa Makassar focused on technology and computing — I've enhanced my programming skills, aligned my passion with my strengths, and developed key soft skills such as leadership, communication, and critical thinking through collaboration, projects, and continuous learning.",
   },
 ];
 
@@ -37,25 +46,19 @@ const techStack = [
 
 const timeline = [
   {
-    year: "2025",
-    title: "Full Stack Developer",
-    company: "TechCorp Inc.",
-    description:
-      "Leading development of enterprise applications using React and Node.js.",
-  },
-  {
-    year: "2024",
-    title: "Backend Developer",
-    company: "StartupXYZ",
+    year: "2024 - 2025 ",
+    title: "Network Technician",
+    company: "PT. BANGSAWAN CYBER INDO",
     description:
       "Built scalable web applications and mentored junior developers.",
   },
   {
-    year: "2023",
-    title: "Frontend Developer",
-    company: "Digital Agency",
+    
+    year: "2023 - Present",
+    title: "Full Stack Developer",
+    company: "Freelance Software Engineer",
     description:
-      "Specialized in creating responsive and interactive user interfaces.",
+      "Freelance Software Engineer building web apps with Next.js and Laravel, and mobile apps with React Native.",
   },
 ];
 
@@ -119,7 +122,7 @@ export default function AboutPage() {
           >
             <Card className="p-6">
               <CardContent className="p-0">
-                <h3 className="text-2xl font-bold mb-6">Tech Stack</h3>
+                <h3 className="text-3xl font-bold mb-6">Tech Stack</h3>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
                     I work with modern technologies to build scalable and
@@ -162,6 +165,37 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6">Education</h2>{" "}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((highlight, index) => (
+              <motion.div
+                key={highlight.label}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                className="border-l-4 border-primary/20 pl-4"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <highlight.icon className="w-5 h-5 text-primary" />
+                  <h4 className="font-semibold text-lg">{highlight.label}</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {highlight.year}
+                </p>
+                <p className="mt-2 text-muted-foreground">
+                  {highlight.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="pt-8 mb-16"
+        >
+          <h2 className="text-3xl font-bold mb-6">Organization</h2>{" "}
+          <div className="grid grid-cols-1  gap-6">
+            {Organization.map((highlight, index) => (
               <motion.div
                 key={highlight.label}
                 initial={{ opacity: 0, x: -20 }}

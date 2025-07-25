@@ -49,7 +49,7 @@ export function Navigation() {
             className="text-xl font-bold cursor-pointer"
           >
             <Link href="/home" className="hover:text-primary transition-colors">
-              Portfolio
+              Luluuu
             </Link>
           </motion.div>
 
