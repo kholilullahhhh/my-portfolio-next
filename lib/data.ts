@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: "Mobile DCC",
     description: "React Native mobile app for Dipanegara Computer Club.",
     longDescription:
-      "Developed the official DCC mobile app using React Native and Laravel to centralize club resources for 200+ members. Optimized API performance for slow networks and implemented offline video caching, reducing student data usage by 40% compared to web platforms.",
+      "Developed the official DCC mobile app using React Native and Go to centralize club resources for 200+ members. Optimized API performance for slow networks and implemented offline video caching, reducing student data usage by 40% compared to web platforms.",
     image: "/mobileDCC.png",
     technologies: ["React Native", "JavaScript", "Go", "Axios", "RESTful API"],
     category: "mobile",

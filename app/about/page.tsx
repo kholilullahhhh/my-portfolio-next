@@ -4,23 +4,25 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Footer } from "@/components/common/footer";
 import { Badge } from "@/components/ui/badge";
+import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
+
 
 import { Building2, GraduationCapIcon, School } from "lucide-react";
 
 const highlights = [
-  {
-    icon: School,
-    label: "SMA Negeri 9 Gowa",
-    year: "2020 - 2023",
-    description:
-      "Graduated with a focus on Science and Mathematics. Developed a strong foundation in analytical thinking and problem-solving skills.",
-  },
   {
     icon: GraduationCapIcon,
     label: "Universitas DIPA Makassar",
     year: "2023 - Present",
     description:
       "Focused on Software Engineering, especially Back-End Development, as a student in Informatics Engineering. Learned key topics like Data Structures, Algorithms, OOP, and Software Development.",
+  },
+  {
+    icon: School,
+    label: "SMA Negeri 9 Gowa",
+    year: "2020 - 2023",
+    description:
+      "Graduated with a focus on Science and Mathematics. Developed a strong foundation in analytical thinking and problem-solving skills.",
   },
 ];
 const Organization = [
@@ -45,9 +47,7 @@ const techStack = [
 ];
 
 const timeline = [
-  
   {
-    
     year: "2023 - Present",
     title: "Full Stack Developer",
     company: "Freelance Software Engineer",
@@ -65,7 +65,7 @@ const timeline = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <GlowingStarsBackgroundCard  className="min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -272,6 +272,6 @@ export default function AboutPage() {
         </motion.div>
       </div>
       <Footer />
-    </div>
+    </GlowingStarsBackgroundCard>
   );
 }
