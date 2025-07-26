@@ -135,11 +135,6 @@ export default function HomePage() {
                   href: "https://www.instagram.com/kholilullahhh_",
                   label: "Instagram",
                 },
-                {
-                  icon: Mail,
-                  href: "https://www.gmail.com",
-                  label: "Mail",
-                },
               ].map((social) => (
                 <Button
                   key={social.label}
