@@ -8,8 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Footer } from '@/components/common/footer';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
-
 import { projects } from '@/lib/data';
 import { Project } from '@/types';
 import Image from 'next/image';
@@ -25,7 +23,7 @@ export default function ProjectsPage() {
   );
 
   return (
-    <GlowingStarsBackgroundCard className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -219,6 +217,6 @@ export default function ProjectsPage() {
         </Dialog>
       </div>
       <Footer />
-    </GlowingStarsBackgroundCard>
+    </div>
   );
 }
