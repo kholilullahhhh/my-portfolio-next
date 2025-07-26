@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description: "A modern, responsive portfolio built with Next.js",
     longDescription:
       "A personal portfolio website developed using Next.js to showcase my projects, skills, and experiences. The site features a responsive design, smooth page transitions, dynamic content rendering, and SEO optimization. Built from scratch, this portfolio serves as a central hub for my professional presence and highlights my frontend development capabilities.",
-    image: "/portfolio.png",
+    image: "/newHome.png",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn"],
     category: "web",
     liveUrl: "https://luluuu.vercel.app/",
