@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -43,6 +43,20 @@ export function Footer() {
               >
                 <Linkedin className="h-4 w-4" />
                 <span className="sr-only">LinkedIn</span>
+              </Button>
+            </a>
+            <a
+              href="https://www.instagram.com/kholilullahhh_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full w-9 h-9 p-0"
+              >
+                <Instagram className="h-4 w-4" />
+                <span className="sr-only">Instagram</span>
               </Button>
             </a>
 

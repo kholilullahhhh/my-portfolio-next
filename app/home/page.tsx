@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 import { GradientFadedBackground } from "@/components/ui/gradient-faded-box";
@@ -134,6 +134,11 @@ export default function HomePage() {
                   icon: Instagram,
                   href: "https://www.instagram.com/kholilullahhh_",
                   label: "Instagram",
+                },
+                {
+                  icon: Mail,
+                  href: "https://www.gmail.com",
+                  label: "Mail",
                 },
               ].map((social) => (
                 <Button

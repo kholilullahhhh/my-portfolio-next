@@ -8,7 +8,6 @@ import { Footer } from '@/components/common/footer';
 import { z } from 'zod';
 import { Send, Mail, MapPin, Phone, Clock, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -90,7 +89,7 @@ export default function ContactPage() {
   };
 
   return (
-    <GlowingStarsBackgroundCard className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -326,6 +325,6 @@ export default function ContactPage() {
         </div>
       </div>
       <Footer />
-    </GlowingStarsBackgroundCard>
+    </div>
   );
 }
