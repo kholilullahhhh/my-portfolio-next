@@ -35,6 +35,7 @@ const Organization = [
 
 const techStack = [
   "Next.js",
+  "Express",
   "React Native",
   "Node.js",
   "Laravel",

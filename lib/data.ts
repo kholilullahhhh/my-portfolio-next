@@ -29,6 +29,21 @@ export const projects: Project[] = [
   },
   {
     id: "3",
+    title: "BBGTK Sulsel",
+    description:
+      "Official Website of BBGTK Sulsel - South Sulawesi's Regional Center for Educator Development.",
+    longDescription:
+      "As the lead developer of an internal management information system for the South Sulawesi Education Office, I built an integrated platform to streamline operations, replacing manual processes. The system includes employee management, educator activity tracking, real-time dashboards with Chart.js, automated PDF/Excel reports, and optimized database performance to handle over 300 daily transactions efficiently.",
+
+    image: "/bbgtk.png",
+    technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
+    category: "web",
+    liveUrl: "https://simbbgpsulsel.com/",
+    githubUrl: "https://github.com/ookapratama/Laravel_bbgp",
+    featured: true,
+  },
+  {
+    id: "4",
     title: "Sistem Pembayaran SPP",
     description:
       "A digital SPP payment system integrated with Midtrans gateway",
@@ -48,6 +63,7 @@ export const skills: Skill[] = [
   { name: "Next.js", proficiency: 90, category: "frontend" },
   { name: "Tailwind CSS", proficiency: 90, category: "frontend" },
   { name: "Node.js", proficiency: 80, category: "backend" },
+  { name: "Express", proficiency: 75, category: "backend" },
   { name: "PostgreSQL", proficiency: 75, category: "backend" },
   { name: "Laravel", proficiency: 70, category: "backend" },
   { name: "Figma", proficiency: 85, category: "design" },
