@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Footer } from "@/components/common/footer";
 import { Badge } from "@/components/ui/badge";
 
-
 import { Building2, GraduationCapIcon, School } from "lucide-react";
 
 const highlights = [
@@ -52,6 +51,13 @@ const timeline = [
     company: "Freelance Software Engineer",
     description:
       "Freelance Software Engineer building web apps with Next.js and Laravel, and mobile apps with React Native.",
+  },
+  {
+    year: "2024 - Present",
+    title: "Fullstack Developer and Lecturer",
+    company: "CV. Siddi Solution Technology",
+    description:
+      "Fullstack Developer (Hybrid Remote) based in Makassar, specializing in system setup and web application development. Active since April 2024.",
   },
   {
     year: "2024 - 2025 ",

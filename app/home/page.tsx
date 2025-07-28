@@ -113,10 +113,11 @@ export default function HomePage() {
 
           {/* Social Links - Fixed at bottom on desktop, inline on mobile */}
           <motion.div
-            className="w-full flex justify-center md:fixed md:bottom-8 md:left-0 md:right-0 md:w-auto mb-8 md:mb-0"
+            className="w-full flex justify-center md:fixed md:bottom-8 md:left-0 md:right-0 md:w-auto mb-8 md:mb-0 z-50" // Added z-50
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            style={{ pointerEvents: "auto" }} // Ensure clickable
           >
             <div className="flex space-x-4 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-muted/50">
               {[
@@ -141,12 +142,13 @@ export default function HomePage() {
                   asChild
                   variant="ghost"
                   size="icon"
-                  className="rounded-full"
+                  className="rounded-full hover:bg-background/20" // Added hover effect
                 >
                   <Link
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="focus:outline-none focus:ring-2 focus:ring-primary/50" // Added focus style
                   >
                     <social.icon className="h-5 w-5" />
                     <span className="sr-only">{social.label}</span>
