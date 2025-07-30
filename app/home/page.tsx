@@ -119,7 +119,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.8 }}
             style={{ pointerEvents: "auto" }} // Ensure clickable
           >
-            <div className="flex space-x-4 bg-background/80 backdrop-blur-sm rounded-full p-2 border border-muted/50">
+            <div className="flex space-x-4 rounded-full p-2 border border-muted/50">
               {[
                 {
                   icon: Github,
