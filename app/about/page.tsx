@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,11 +23,12 @@ const highlights = [
       "Graduated with a focus on Science and Mathematics. Developed a strong foundation in analytical thinking and problem-solving skills.",
   },
 ];
-const Organization = [
+
+const organizations = [
   {
     icon: Building2,
     label: "Dipanegra Computer Club",
-    year: "2024 - present",
+    year: "2024 - Present",
     description:
       "As a member of Dipanegara Computer Club — a student organization at Universitas Dipa Makassar focused on technology and computing — I've enhanced my programming skills, aligned my passion with my strengths, and developed key soft skills such as leadership, communication, and critical thinking through collaboration, projects, and continuous learning.",
   },
@@ -42,7 +43,7 @@ const techStack = [
   "PostgreSQL",
   "MySQL",
   "Git",
-  "Git Hub",
+  "GitHub",
 ];
 
 const timeline = [
@@ -61,7 +62,7 @@ const timeline = [
       "Fullstack Developer (Hybrid Remote) based in Makassar, specializing in system setup and web application development. Active since April 2024.",
   },
   {
-    year: "2024 - 2025 ",
+    year: "2024 - 2025",
     title: "Network Technician",
     company: "PT. BANGSAWAN CYBER INDO",
     description:
@@ -73,6 +74,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,6 +92,7 @@ export default function AboutPage() {
           </p>
         </motion.div>
 
+        {/* Personal Story & Tech Stack */}
         <div className="grid lg:grid-cols-2 gap-16 mb-16">
           {/* Personal Story */}
           <motion.div
@@ -162,66 +165,69 @@ export default function AboutPage() {
           </motion.div>
         </div>
 
-        {/* Highlights Grid */}
+        {/* Education */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="pt-8 mb-16"
         >
-          <h2 className="text-3xl font-bold mb-6">Education</h2>{" "}
+          <h2 className="text-3xl font-bold mb-6">Education</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {highlights.map((highlight, index) => (
-              <motion.div
-                key={highlight.label}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                className="border-l-4 border-primary/20 pl-4"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <highlight.icon className="w-5 h-5 text-primary" />
-                  <h4 className="font-semibold text-lg">{highlight.label}</h4>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {highlight.year}
-                </p>
-                <p className="mt-2 text-muted-foreground">
-                  {highlight.description}
-                </p>
-              </motion.div>
-            ))}
+            {highlights.map((highlight, index) => {
+              const Icon = highlight.icon;
+              return (
+                <motion.div
+                  key={highlight.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                  className="border-l-4 border-primary/20 pl-4"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <Icon className="w-5 h-5 text-primary" />
+                    <h4 className="font-semibold text-lg">{highlight.label}</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {highlight.year}
+                  </p>
+                  <p className="mt-2 text-muted-foreground">
+                    {highlight.description}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
+        {/* Organization */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="pt-8 mb-16"
         >
-          <h2 className="text-3xl font-bold mb-6">Organization</h2>{" "}
-          <div className="grid grid-cols-1  gap-6">
-            {Organization.map((highlight, index) => (
-              <motion.div
-                key={highlight.label}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                className="border-l-4 border-primary/20 pl-4"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <highlight.icon className="w-5 h-5 text-primary" />
-                  <h4 className="font-semibold text-lg">{highlight.label}</h4>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {highlight.year}
-                </p>
-                <p className="mt-2 text-muted-foreground">
-                  {highlight.description}
-                </p>
-              </motion.div>
-            ))}
+          <h2 className="text-3xl font-bold mb-6">Organization</h2>
+          <div className="grid grid-cols-1 gap-6">
+            {organizations.map((org, index) => {
+              const Icon = org.icon;
+              return (
+                <motion.div
+                  key={org.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                  className="border-l-4 border-primary/20 pl-4"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <Icon className="w-5 h-5 text-primary" />
+                    <h4 className="font-semibold text-lg">{org.label}</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{org.year}</p>
+                  <p className="mt-2 text-muted-foreground">{org.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -237,7 +243,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
               <motion.div
-                key={item.year}
+                key={`${item.year}-${item.title}`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}

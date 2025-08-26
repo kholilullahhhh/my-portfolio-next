@@ -35,10 +35,10 @@ export const projects: Project[] = [
     longDescription:
       "As the lead developer of an internal management information system for the South Sulawesi Education Office, I built an integrated platform to streamline operations, replacing manual processes. The system includes employee management, educator activity tracking, real-time dashboards with Chart.js, automated PDF/Excel reports, and optimized database performance to handle over 300 daily transactions efficiently.",
 
-    image: "/bbgtk.png",
+    image: "/bbgp.png",
     technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
     category: "web",
-    liveUrl: "https://simbbgpsulsel.com/",
+    liveUrl: "https://simbbgtksulsel.com/",
     githubUrl: "https://github.com/ookapratama/Laravel_bbgp",
     featured: true,
   },
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     longDescription:
       "A web-based SPP payment system designed to streamline tuition fee transactions. Integrated with the Midtrans payment gateway, it supports various payment methods, provides real-time status updates, and ensures secure, seamless transactions for students and administrators.",
 
-    image: "/midtrans.png",
+    image: "/spp.png",
     technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
     category: "web",
     githubUrl: "https://github.com/kholilullahhhh/Spp-paymantGateway-midtrans",
