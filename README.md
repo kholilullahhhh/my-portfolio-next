@@ -151,7 +151,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 **Your Name**
 - Website: [luluuu.vercel.app](https://luluuu.vercel.app)
-- GitHub: [@kholilullahhhh](https://github.com/Kholilullah hhh)
+- GitHub: [@kholilullahhhh](https://github.com/Kholilullahhhh)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/muhammad-kholilullah-8b7832276)
 
 ---
