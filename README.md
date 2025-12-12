@@ -150,9 +150,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 👨‍💻 Author
 
 **Your Name**
-- Website: [yourwebsite.com](https://yourwebsite.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
+- Website: [luluuu.vercel.app](https://luluuu.vercel.app)
+- GitHub: [@kholilullahhhh](https://github.com/Kholilullah hhh)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/muhammad-kholilullah-8b7832276)
 
 ---
 
