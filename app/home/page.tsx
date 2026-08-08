@@ -65,9 +65,9 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Undergraduate of Informatics Engineering at Universitas Dipa
-                Makassar.
+                Makassar. Enthusiastic about continuous learning and
                 <br />
-                Enthusiastic about continuous learning and building impactful
+                building impactful
                 open source projects.
               </motion.p>
 

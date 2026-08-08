@@ -56,6 +56,19 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/kholilullahhhh/Spp-paymantGateway-midtrans",
     featured: false,
   },
+  {
+    id: "5",
+    title: "Bantaeng Office Smart Service",
+    description:
+      "A digital service app for streamlined public administration in Bantaeng.",
+    longDescription:
+      "Bantaeng Office Smart Service is a web-based platform that digitizes public administration tasks. It lets citizens submit service requests, track status updates in real time, and access government services securely — making public services faster, transparent, and more accessible.",
+    image: "/boss.png",
+    technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
+    category: "web",
+    githubUrl: "https://github.com/kholilullahhhh/rap",
+    featured: true,
+  },
 ];
 
 export const skills: Skill[] = [
