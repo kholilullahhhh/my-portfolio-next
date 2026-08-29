@@ -69,6 +69,21 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/kholilullahhhh/rap",
     featured: true,
   },
+  
+  {
+    id: "6",
+    title: "Harmony Home",
+    description:
+      "Harmony Home is a modern boarding house offering comfortable rooms, complete facilities, and a peaceful living experience.",
+    longDescription:
+      "Through a simple and user-friendly digital platform, residents can access important information about their room, facilities, house rules, and available services. The platform is designed to make the rental process more practical and transparent, allowing prospective residents to view room information and make inquiries without complicated procedures. Whether you are a student, employee, or anyone looking for a comfortable place to live, Harmony Home offers a reliable and modern boarding house experience with convenient services and a home-like atmosphere.",
+    image: "/harmony.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn"],
+    category: "web",
+    liveUrl: "https://harmonyhome-iota.vercel.app/",
+    githubUrl: "https://github.com/kholilullahhhh/harmonyHome-next",
+    featured: true,
+  },
 ];
 
 export const skills: Skill[] = [
