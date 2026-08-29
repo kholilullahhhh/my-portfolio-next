@@ -99,11 +99,11 @@ export default function ProjectsPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button
-                          size="sm"
-                          onClick={() => setSelectedProject(project)}
-                          className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30"
-                        >
+                          <Button
+                            size="sm"
+                            onClick={() => setSelectedProject(project)}
+                            className="btn-glossy hover:bg-primary/90 text-white border-white/30"
+                          >
                           View Details
                         </Button>
                       </div>
@@ -246,7 +246,7 @@ export default function ProjectsPage() {
 
                       <div className="flex gap-4 pt-4 border-t">
                         {selectedProject.liveUrl && (
-                          <Button asChild className="flex-1">
+                          <Button asChild className="flex-1 btn-glossy">
                             <a
                               href={selectedProject.liveUrl}
                               target="_blank"

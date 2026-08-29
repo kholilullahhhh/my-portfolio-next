@@ -77,7 +77,7 @@ export default function HomePage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="btn-glossy">
                   <Link href="/projects">
                     View My Work
                     <ArrowRight className="ml-2 h-4 w-4" />

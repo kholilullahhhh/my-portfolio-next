@@ -12,7 +12,7 @@ export const projects: Project[] = [
     category: "web",
     liveUrl: "https://luluuu.vercel.app/",
     githubUrl: "https://github.com/kholilullahhhh/my-portfolio-next",
-    featured: false,
+    featured: true,
   },
   {
     id: "2",
@@ -23,7 +23,6 @@ export const projects: Project[] = [
     image: "/mobileDCC.png",
     technologies: ["React Native", "JavaScript", "Go", "Axios", "RESTful API"],
     category: "mobile",
-    liveUrl: "#",
     githubUrl: "#",
     featured: false,
   },

@@ -310,7 +310,7 @@ export default function ContactPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3 text-lg font-semibold"
+                      className="w-full py-3 text-lg font-semibold btn-glossy"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center space-x-2">
