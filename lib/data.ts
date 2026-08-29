@@ -46,7 +46,7 @@ export const projects: Project[] = [
     id: "4",
     title: "Sistem Pembayaran SPP",
     description:
-      "A smart digital platform designed to streamline school fee management with fast, secure, and convenient Midtrans payments.",
+      "A smart digital platform in Vocational High School, designed to streamline school fee management with fast, secure, and convenient Midtrans payments.",
     longDescription:
       "A web-based SPP payment system designed to streamline tuition fee transactions. Integrated with the Midtrans payment gateway, it supports various payment methods, provides real-time status updates, and ensures secure, seamless transactions for students and administrators.",
 
