@@ -46,7 +46,7 @@ export const projects: Project[] = [
     id: "4",
     title: "Sistem Pembayaran SPP",
     description:
-      "A digital SPP payment system integrated with Midtrans gateway",
+      "A smart digital platform designed to streamline school fee management with fast, secure, and convenient Midtrans payments.",
     longDescription:
       "A web-based SPP payment system designed to streamline tuition fee transactions. Integrated with the Midtrans payment gateway, it supports various payment methods, provides real-time status updates, and ensures secure, seamless transactions for students and administrators.",
 
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     id: "5",
     title: "Bantaeng Office Smart Service",
     description:
-      "A digital service app for streamlined public administration in Bantaeng.",
+      "Modern digital platform for streamlined public administration in Bantaeng, providing citizens with faster, easier, and more accessible access to essential government services.",
     longDescription:
       "Bantaeng Office Smart Service is a web-based platform that digitizes public administration tasks. It lets citizens submit service requests, track status updates in real time, and access government services securely — making public services faster, transparent, and more accessible.",
     image: "/boss.png",

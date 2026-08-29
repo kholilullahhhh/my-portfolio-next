@@ -20,7 +20,9 @@ Next.js portfolio site (App Router) for Muhammad Kholilullah. Static export, no 
 ## App structure
 
 - `/` (app/page.tsx) just redirects to `/home`. All real pages are App Router routes: `home`, `about`, `projects`, `contact`.
-- Pages are largely `"use client"` components using framer-motion; `Navigation` + `Footer` live in `app/layout.tsx` (note: `contact/page.tsx` also imports `Footer` itself).
+- `Navigation` lives in `app/layout.tsx` and renders on every page.
+- `Footer` is imported but **unused** in `app/layout.tsx`. It is instead imported and rendered individually by `about`, `contact`, and `projects` pages (not `home`).
+- Pages are largely `"use client"` components using framer-motion.
 - Path alias: `@/*` maps to repo root. Import like `@/components/ui/button`, `@/lib/utils`.
 - shadcn/ui components in `components/ui/` (style "default", RSC-compatible). Add new ones with `npx shadcn-ui@latest add <name>`.
 
