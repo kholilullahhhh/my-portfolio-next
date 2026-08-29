@@ -6,6 +6,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/common/footer";
+import TechIcon from "@/components/common/tech-icon";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
@@ -127,8 +128,9 @@ export default function ProjectsPage() {
                           <Badge
                             key={tech}
                             variant="secondary"
-                            className="text-xs"
+                            className="text-xs flex items-center gap-1"
                           >
+                            <TechIcon name={tech} className="w-3 h-3" />
                             {tech}
                           </Badge>
                         ))}
@@ -236,8 +238,9 @@ export default function ProjectsPage() {
                             <Badge
                               key={tech}
                               variant="secondary"
-                              className="px-3 py-1"
+                              className="px-3 py-1 flex items-center gap-1.5"
                             >
+                              <TechIcon name={tech} className="w-4 h-4" />
                               {tech}
                             </Badge>
                           ))}

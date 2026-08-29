@@ -10,6 +10,14 @@ import {
   SiMysql,
   SiGit,
   SiGithub,
+  SiTypescript,
+  SiTailwindcss,
+  SiJavascript,
+  SiGo,
+  SiAxios,
+  SiPhp,
+  SiJquery,
+  SiBootstrap,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -22,24 +30,42 @@ const iconMap: Record<string, IconType> = {
   "Next.js": SiNextdotjs,
   Express: SiExpress,
   "React Native": SiReact,
+  React: SiReact,
   "Node.js": SiNodedotjs,
   Laravel: SiLaravel,
   PostgreSQL: SiPostgresql,
   MySQL: SiMysql,
   Git: SiGit,
   GitHub: SiGithub,
+  TypeScript: SiTypescript,
+  "Tailwind CSS": SiTailwindcss,
+  JavaScript: SiJavascript,
+  Go: SiGo,
+  Axios: SiAxios,
+  PHP: SiPhp,
+  Jquery: SiJquery,
+  Bootstrap: SiBootstrap,
 };
 
 const iconColors: Record<string, string> = {
   "Next.js": "#000000",
   Express: "#000000",
   "React Native": "#61DAFB",
+  React: "#61DAFB",
   "Node.js": "#339933",
   Laravel: "#FF2D20",
   PostgreSQL: "#4169E1",
   MySQL: "#4479A1",
   Git: "#F03C2E",
   GitHub: "#181717",
+  TypeScript: "#3178C6",
+  "Tailwind CSS": "#06B6D4",
+  JavaScript: "#F7DF1E",
+  Go: "#00ADD8",
+  Axios: "#5A29E4",
+  PHP: "#777BB4",
+  Jquery: "#0769AD",
+  Bootstrap: "#7952B3",
 };
 
 export default function TechIcon({ name, className = "" }: TechIconProps) {
