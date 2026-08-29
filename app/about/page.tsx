@@ -7,6 +7,7 @@ import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 import { GradientFadedBackground } from "@/components/ui/gradient-faded-box";
 
 import { Badge } from "@/components/ui/badge";
+import TechIcon from "@/components/common/tech-icon";
 
 import { Building2, GraduationCapIcon, School } from "lucide-react";
 
@@ -156,8 +157,9 @@ export default function AboutPage() {
                         >
                           <Badge
                             variant="secondary"
-                            className="text-sm py-1 px-3"
+                            className="text-sm py-1 px-3 flex items-center gap-1.5"
                           >
+                            <TechIcon name={tech} className="w-4 h-4" />
                             {tech}
                           </Badge>
                         </motion.div>
