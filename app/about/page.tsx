@@ -42,12 +42,20 @@ const techStack = [
   "Next.js",
   "Express",
   "React Native",
-  "Node.js",
   "Laravel",
+  "TypeScript",
+  "Node.js",
+  "Tailwind CSS",
+  "Shadcn",
   "PostgreSQL",
   "MySQL",
   "Git",
   "GitHub",
+  "Supabase",
+  "Neon",
+  "Vercel",
+
+
 ];
 
 const timeline = [
@@ -157,9 +165,8 @@ export default function AboutPage() {
                         >
                           <Badge
                             variant="secondary"
-                            className="text-sm py-1 px-3 flex items-center gap-1.5"
+                            className="text-sm py-1 px-3"
                           >
-                            <TechIcon name={tech} className="w-4 h-4" />
                             {tech}
                           </Badge>
                         </motion.div>
@@ -266,33 +273,33 @@ export default function AboutPage() {
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10" />
 
                   {/* Content */}
-<div
-  className={`relative z-10 w-full md:w-5/12 ${
-    index % 2 === 0
-      ? "md:pr-8 md:text-right"
-      : "md:ml-auto md:pl-8"
-  }`}
->
-  <Card className="relative z-10 w-full p-4 sm:p-5 md:p-6 bg-background hover:shadow-lg transition-all duration-300">
-    <CardContent className="p-0">
-      <div className="text-primary font-bold text-base sm:text-lg mb-1.5 sm:mb-2">
-        {item.year}
-      </div>
+                  <div
+                    className={`relative z-10 w-full md:w-5/12 ${
+                      index % 2 === 0
+                        ? "md:pr-8 md:text-right"
+                        : "md:ml-auto md:pl-8"
+                    }`}
+                  >
+                    <Card className="relative z-10 w-full p-4 sm:p-5 md:p-6 bg-background hover:shadow-lg transition-all duration-300">
+                      <CardContent className="p-0">
+                        <div className="text-primary font-bold text-base sm:text-lg mb-1.5 sm:mb-2">
+                          {item.year}
+                        </div>
 
-      <h3 className="font-semibold text-base sm:text-lg leading-snug mb-1">
-        {item.title}
-      </h3>
+                        <h3 className="font-semibold text-base sm:text-lg leading-snug mb-1">
+                          {item.title}
+                        </h3>
 
-      <div className="text-muted-foreground font-medium text-sm sm:text-base mb-2">
-        {item.company}
-      </div>
+                        <div className="text-muted-foreground font-medium text-sm sm:text-base mb-2">
+                          {item.company}
+                        </div>
 
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        {item.description}
-      </p>
-    </CardContent>
-  </Card>
-</div>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {item.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
