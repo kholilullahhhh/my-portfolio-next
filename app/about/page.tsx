@@ -42,12 +42,20 @@ const techStack = [
   "Next.js",
   "Express",
   "React Native",
-  "Node.js",
   "Laravel",
+  "TypeScript",
+  "Node.js",
+  // "Tailwind CSS",
+  // "Shadcn",
   "PostgreSQL",
   "MySQL",
+  "Supabase",
   "Git",
   "GitHub",
+  // "Neon",
+  "Vercel",
+
+
 ];
 
 const timeline = [
@@ -157,8 +165,9 @@ export default function AboutPage() {
                         >
                           <Badge
                             variant="secondary"
-                            className="text-sm py-1 px-3"
+                            className="text-sm py-1 px-3 gap-1.5"
                           >
+                            <TechIcon name={tech} className="w-4 h-4" />
                             {tech}
                           </Badge>
                         </motion.div>

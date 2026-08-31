@@ -20,7 +20,8 @@ import {
   SiBootstrap,
   SiSupabase,
   SiShadcnui,
-  SiNeon
+  SiNeon,
+  SiVercel
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -50,8 +51,8 @@ const iconMap: Record<string, IconType> = {
   Bootstrap: SiBootstrap,
   Supabase: SiSupabase,
   Shadcn: SiShadcnui,
-  Neon: SiNeon
-
+  Neon: SiNeon,
+  Vercel: SiVercel
 };
 
 const iconColors: Record<string, string> = {
@@ -73,6 +74,10 @@ const iconColors: Record<string, string> = {
   PHP: "#777BB4",
   Jquery: "#0769AD",
   Bootstrap: "#7952B3",
+  Supabase: "#3FCF8E",
+  Shadcn: "#000000",
+  Neon: "#00E599",
+  Vercel: "#000000"
 };
 
 export default function TechIcon({ name, className = "" }: TechIconProps) {
