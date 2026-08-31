@@ -8,7 +8,7 @@ export const projects: Project[] = [
     longDescription:
       "A personal portfolio website developed using Next.js to showcase my projects, skills, and experiences. The site features a responsive design, smooth page transitions, dynamic content rendering, and SEO optimization. Built from scratch, this portfolio serves as a central hub for my professional presence and highlights my frontend development capabilities.",
     image: "/newHome.png",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn", "Neon"],
     category: "web",
     liveUrl: "https://luluuu.vercel.app/",
     githubUrl: "https://github.com/kholilullahhhh/my-portfolio-next",
@@ -65,7 +65,6 @@ export const projects: Project[] = [
     image: "/boss.png",
     technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
     category: "web",
-    liveUrl: "https://boss-bantaeng.site/",
     githubUrl: "https://github.com/kholilullahhhh/rap",
     featured: true,
   },

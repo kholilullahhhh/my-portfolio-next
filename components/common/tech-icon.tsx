@@ -18,6 +18,9 @@ import {
   SiPhp,
   SiJquery,
   SiBootstrap,
+  SiSupabase,
+  SiShadcnui,
+  SiNeon
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -45,6 +48,10 @@ const iconMap: Record<string, IconType> = {
   PHP: SiPhp,
   Jquery: SiJquery,
   Bootstrap: SiBootstrap,
+  Supabase: SiSupabase,
+  Shadcn: SiShadcnui,
+  Neon: SiNeon
+
 };
 
 const iconColors: Record<string, string> = {
