@@ -65,6 +65,7 @@ export const projects: Project[] = [
     image: "/boss.png",
     technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
     category: "web",
+    liveUrl: "https://boss-bantaeng.site/",
     githubUrl: "https://github.com/kholilullahhhh/rap",
     featured: true,
   },
@@ -77,7 +78,7 @@ export const projects: Project[] = [
     longDescription:
       "Through a simple and user-friendly digital platform, residents can access important information about their room, facilities, house rules, and available services. The platform is designed to make the rental process more practical and transparent, allowing prospective residents to view room information and make inquiries without complicated procedures. Whether you are a student, employee, or anyone looking for a comfortable place to live, Harmony Home offers a reliable and modern boarding house experience with convenient services and a home-like atmosphere.",
     image: "/harmony.png",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL" ,"Tailwind CSS", "Shadcn", "Neon"],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL" ,"Tailwind CSS", "Shadcn", "Supabase"],
     category: "web",
     liveUrl: "https://harmonyhome-iota.vercel.app/",
     githubUrl: "https://github.com/kholilullahhhh/harmonyHome-next",
