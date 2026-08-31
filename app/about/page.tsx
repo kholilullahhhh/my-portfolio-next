@@ -49,9 +49,9 @@ const techStack = [
   "Shadcn",
   "PostgreSQL",
   "MySQL",
+  "Supabase",
   "Git",
   "GitHub",
-  "Supabase",
   // "Neon",
   // "Vercel",
 
