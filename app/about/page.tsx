@@ -45,15 +45,15 @@ const techStack = [
   "Laravel",
   "TypeScript",
   "Node.js",
-  "Tailwind CSS",
+  // "Tailwind CSS",
   "Shadcn",
   "PostgreSQL",
   "MySQL",
   "Git",
   "GitHub",
   "Supabase",
-  "Neon",
-  "Vercel",
+  // "Neon",
+  // "Vercel",
 
 
 ];
