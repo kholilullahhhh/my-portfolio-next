@@ -42,20 +42,12 @@ const techStack = [
   "Next.js",
   "Express",
   "React Native",
-  "Laravel",
-  "TypeScript",
   "Node.js",
-  // "Tailwind CSS",
-  "Shadcn",
+  "Laravel",
   "PostgreSQL",
   "MySQL",
-  "Supabase",
   "Git",
   "GitHub",
-  // "Neon",
-  // "Vercel",
-
-
 ];
 
 const timeline = [
