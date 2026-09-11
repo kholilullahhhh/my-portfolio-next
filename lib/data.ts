@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: "4",
     title: "Otomatisasi Absensi Siswa dengan Pencocokan Wajah",
     description:
-      "Solusi presensi untuk SMP . Memangkas waktu pencatatan manual, meningkatkan akurasi kehadiran, dan secara real-time.",
+      "presensi pintar Memangkas waktu pencatatan manual, meningkatkan akurasi kehadiran, dan secara real-time.",
     longDescription:
       "Sistem absensi siswa berbasis face recognition yang dirancang untuk mengotomatisasi proses pencatatan kehadiran di SMP Aisyiyah Paccinongang. Menggunakan YOLOv8 untuk deteksi wajah dan FaceNet untuk menghasilkan serta mencocokkan embedding wajah siswa. Sistem mendukung proses pengenalan wajah secara real-time dan menyimpan hasil absensi secara aman ke dalam database.",
     image: "/image.png",
