@@ -45,7 +45,7 @@ const techStack = [
   "Laravel",
   "TypeScript",
   "Node.js",
-  "Pyton",
+  "Python",
   // "Tailwind CSS",
   // "Shadcn",
   "PostgreSQL",
