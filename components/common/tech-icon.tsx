@@ -54,7 +54,6 @@ const iconMap: Record<string, IconType> = {
   Shadcn: SiShadcnui,
   Neon: SiNeon,
   Vercel: SiVercel,
-  Python: SiPython,
   FastAPI: SiPython, // Assuming you have an icon for FastAPI, replace 'Sifastapi' with the actual icon import
 };
 
@@ -80,8 +79,7 @@ const iconColors: Record<string, string> = {
   Supabase: "#3FCF8E",
   Shadcn: "#000000",
   Neon: "#00E599",
-  Vercel: "#000000",
-  Python: "#3776AB"
+  Vercel: "#000000"
 };
 
 const gradientIcons: Record<string, string> = {
