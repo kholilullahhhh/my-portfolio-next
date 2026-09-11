@@ -21,7 +21,8 @@ import {
   SiSupabase,
   SiShadcnui,
   SiNeon,
-  SiVercel
+  SiVercel,
+  SiPython
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -52,7 +53,8 @@ const iconMap: Record<string, IconType> = {
   Supabase: SiSupabase,
   Shadcn: SiShadcnui,
   Neon: SiNeon,
-  Vercel: SiVercel
+  Vercel: SiVercel,
+  Python: SiPython
 };
 
 const iconColors: Record<string, string> = {

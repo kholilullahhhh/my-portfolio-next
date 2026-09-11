@@ -45,6 +45,7 @@ const techStack = [
   "Laravel",
   "TypeScript",
   "Node.js",
+  "Pyton",
   // "Tailwind CSS",
   // "Shadcn",
   "PostgreSQL",
@@ -53,7 +54,7 @@ const techStack = [
   "Git",
   "GitHub",
   // "Neon",
-  "Vercel",
+  // "Vercel",
 
 
 ];

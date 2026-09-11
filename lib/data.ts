@@ -50,13 +50,11 @@ export const projects: Project[] = [
       "Sistem absensi siswa berbasis face recognition yang dirancang untuk mengotomatisasi proses pencatatan kehadiran di SMP Aisyiyah Paccinongang. Menggunakan YOLOv8 untuk deteksi wajah dan FaceNet untuk menghasilkan serta mencocokkan embedding wajah siswa. Sistem mendukung proses pengenalan wajah secara real-time dan menyimpan hasil absensi secara aman ke dalam database.",
     image: "/image.png",
     technologies: [
+      "Next.js",
       "Laravel",
       "Python",
-      "FastAPI",
-      "YOLOv8",
-      "FaceNet",
       "PostgreSQL",
-      "Next.js",
+      "FastAPI",
     ],
     category: "web",
     githubUrl:
