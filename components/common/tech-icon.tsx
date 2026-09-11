@@ -79,7 +79,8 @@ const iconColors: Record<string, string> = {
   Supabase: "#3FCF8E",
   Shadcn: "#000000",
   Neon: "#00E599",
-  Vercel: "#000000"
+  Vercel: "#000000",
+  Python: "#3776AB"
 };
 
 export default function TechIcon({ name, className = "" }: TechIconProps) {
