@@ -81,11 +81,26 @@ const iconColors: Record<string, string> = {
   Shadcn: "#000000",
   Neon: "#00E599",
   Vercel: "#000000",
-  FastAPI: "#009688",
-  Python: "linear-gradient(135deg, #3776AB 0%, #FFD43B 100%)"
+  Python: "#3776AB"
+};
+
+const gradientIcons: Record<string, string> = {
+  Python: "/python.svg",
 };
 
 export default function TechIcon({ name, className = "" }: TechIconProps) {
+  const gradientSrc = gradientIcons[name];
+
+  if (gradientSrc) {
+    return (
+      <img
+        src={gradientSrc}
+        alt={name}
+        className={className}
+      />
+    );
+  }
+
   const Icon = iconMap[name];
   const color = iconColors[name];
 

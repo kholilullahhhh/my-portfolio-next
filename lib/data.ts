@@ -43,7 +43,7 @@ export const projects: Project[] = [
   },
   {
     id: "4",
-    title: "Face Recognition Attendance System",
+    title: "Face Recognition Attendance",
     description:
       "presensi pintar untuk Memangkas waktu pencatatan manual, meningkatkan akurasi kehadiran, dan secara real-time. Menggunakan YOLOv8 dan FaceNet .",
     longDescription:
