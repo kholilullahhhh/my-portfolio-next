@@ -54,7 +54,6 @@ const iconMap: Record<string, IconType> = {
   Shadcn: SiShadcnui,
   Neon: SiNeon,
   Vercel: SiVercel,
-  FastAPI: SiPython, // Assuming you have an icon for FastAPI, replace 'Sifastapi' with the actual icon import
 };
 
 const iconColors: Record<string, string> = {

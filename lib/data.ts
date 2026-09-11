@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: "4",
     title: "Face Recognition Attendance",
     description:
-      "presensi pintar untuk Memangkas waktu pencatatan manual, meningkatkan akurasi kehadiran, dan secara real-time. Menggunakan YOLOv8 dan FaceNet .",
+      "presensi yang Memangkas waktu pencatatan manual, meningkatkan akurasi kehadiran, dan secara real-time. Menggunakan YOLOv8 dan FaceNet .",
     longDescription:
       "Sistem absensi siswa berbasis face recognition yang dirancang untuk mengotomatisasi proses pencatatan kehadiran di SMP Aisyiyah Paccinongang. Menggunakan YOLOv8 untuk deteksi wajah dan FaceNet untuk menghasilkan serta mencocokkan embedding wajah siswa. Sistem mendukung proses pengenalan wajah secara real-time dan menyimpan hasil absensi secara aman ke dalam database.",
     image: "/image.png",
