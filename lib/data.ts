@@ -43,17 +43,27 @@ export const projects: Project[] = [
   },
   {
     id: "4",
-    title: "Sistem Pembayaran SPP",
+    title: "Otomatisasi Absensi Siswa dengan Pencocokan Wajah",
     description:
-      "A smart digital platform, designed to streamline school fee management with fast, secure, and convenient Midtrans payments.",
+      "Solusi presensi pintar untuk SMP Aisyiyah Paccinongang. Memangkas waktu pencatatan manual, meningkatkan akurasi kehadiran, dan terintegrasi secara real-time.",
     longDescription:
-      "A web-based SPP payment system designed to streamline tuition fee transactions. Integrated with the Midtrans payment gateway, it supports various payment methods, provides real-time status updates, and ensures secure, seamless transactions for students and administrators.",
-
-    image: "/spp.png",
-    technologies: ["Laravel", "PHP", "MySQL", "Jquery", "Bootstrap"],
+      "Sistem absensi siswa berbasis face recognition yang dirancang untuk mengotomatisasi proses pencatatan kehadiran di SMP Aisyiyah Paccinongang. Menggunakan YOLOv8 untuk deteksi wajah dan FaceNet untuk menghasilkan serta mencocokkan embedding wajah siswa. Sistem mendukung proses pengenalan wajah secara real-time dan menyimpan hasil absensi secara aman ke dalam database.",
+    image: "/image.png",
+    technologies: [
+      "Laravel",
+      "Python",
+      "FastAPI",
+      "YOLOv8",
+      "FaceNet",
+      "PostgreSQL",
+      "Next.js",
+    ],
     category: "web",
-    githubUrl: "https://github.com/kholilullahhhh/Spp-paymantGateway-midtrans",
-    featured: false,
+    githubUrl:
+      "https://github.com/kholilullahhhh/facerecogetion_yoloV8andFaceNet.git",
+    liveUrl: "https://facerecogetion-yolo-v8and-face-net-two.vercel.app/",
+
+    featured: true,
   },
   {
     id: "5",
@@ -68,7 +78,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/kholilullahhhh/rap",
     featured: true,
   },
-  
+
   {
     id: "6",
     title: "Harmony Home",
@@ -77,7 +87,14 @@ export const projects: Project[] = [
     longDescription:
       "Through a simple and user-friendly digital platform, residents can access important information about their room, facilities, house rules, and available services. The platform is designed to make the rental process more practical and transparent, allowing prospective residents to view room information and make inquiries without complicated procedures. Whether you are a student, employee, or anyone looking for a comfortable place to live, Harmony Home offers a reliable and modern boarding house experience with convenient services and a home-like atmosphere.",
     image: "/harmony.png",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL" ,"Tailwind CSS", "Shadcn", "Supabase"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Shadcn",
+      "Supabase",
+    ],
     category: "web",
     liveUrl: "https://harmonyhome-iota.vercel.app/",
     githubUrl: "https://github.com/kholilullahhhh/harmonyHome-next",
