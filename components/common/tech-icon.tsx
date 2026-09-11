@@ -80,7 +80,7 @@ const iconColors: Record<string, string> = {
   Shadcn: "#000000",
   Neon: "#00E599",
   Vercel: "#000000",
-  Python: "#3776AB"
+  Python: "linear-gradient(135deg, #3776AB 0%, #FFD43B 100%)"
 };
 
 export default function TechIcon({ name, className = "" }: TechIconProps) {
