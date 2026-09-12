@@ -1,12 +1,22 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Fraunces, DM_Sans } from 'next/font/google';
 import { Providers } from '@/components/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { Navigation } from '@/components/common/navigation';
 import { Footer } from '@/components/common/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Muhammad Kholilullah - Full Stack Developer Portfolio',
@@ -85,7 +95,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${fraunces.variable} ${dmSans.variable} font-sans`}>
         <Providers
           attribute="class"
           defaultTheme="system"
