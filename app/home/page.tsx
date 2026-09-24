@@ -84,7 +84,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">Contact Me</Link>
+                  <Link href="/stats">Dashboard</Link>
                 </Button>
               </motion.div>
             </motion.div>
