@@ -8,7 +8,12 @@ export const projects: Project[] = [
     longDescription:
       "A personal portfolio website developed using Next.js to showcase my projects, skills, and experiences. The site features a responsive design, smooth page transitions, dynamic content rendering, and SEO optimization. Built from scratch, this portfolio serves as a central hub for my professional presence and highlights my frontend development capabilities.",
     image: "/portfolio1.png",
-    images: ["/portfolio1.png", "/portfolio2.png", "/portfolio3.png", "/portfolio4.png"],
+    images: [
+      "/portfolio1.png",
+      "/portfolio2.png",
+      "/portfolio3.png",
+      "/portfolio4.png",
+    ],
     technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn", "Neon"],
     category: "web",
     liveUrl: "https://luluuu.vercel.app/",
@@ -53,13 +58,7 @@ export const projects: Project[] = [
       "Sistem absensi siswa berbasis face recognition yang dirancang untuk mengotomatisasi proses pencatatan kehadiran di SMP Aisyiyah Paccinongang. Menggunakan YOLOv8 untuk deteksi wajah dan FaceNet untuk menghasilkan serta mencocokkan embedding wajah siswa. Sistem mendukung proses pengenalan wajah secara real-time dan menyimpan hasil absensi secara aman ke dalam database.",
     image: "/image.png",
     images: ["/image.png"],
-    technologies: [
-      "Next.js",
-      "Laravel",
-      "Python",
-      "PostgreSQL",
-      "FastAPI",
-    ],
+    technologies: ["Next.js", "Laravel", "Python", "PostgreSQL", "FastAPI"],
     category: "web",
     githubUrl:
       "https://github.com/kholilullahhhh/facerecogetion_yoloV8andFaceNet.git",
@@ -90,7 +89,16 @@ export const projects: Project[] = [
     longDescription:
       "Through a simple and user-friendly digital platform, residents can access important information about their room, facilities, house rules, and available services. The platform is designed to make the rental process more practical and transparent, allowing prospective residents to view room information and make inquiries without complicated procedures. Whether you are a student, employee, or anyone looking for a comfortable place to live, Harmony Home offers a reliable and modern boarding house experience with convenient services and a home-like atmosphere.",
     image: "/harmony.png",
-    images: ["/harmony.png", "/harmony2.png", "/harmony3.png", "/harmony4.png", "/harmony5.png", "/harmony6.png", "/harmony7.png", "/harmony8.png"],
+    images: [
+      "/harmony.png",
+      "/harmony2.png",
+      "/harmony3.png",
+      "/harmony4.png",
+      "/harmony5.png",
+      "/harmony6.png",
+      "/harmony7.png",
+      "/harmony8.png",
+    ],
     technologies: [
       "Next.js",
       "TypeScript",
@@ -104,16 +112,33 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/kholilullahhhh/harmonyHome-next",
     featured: true,
   },
-   {
+  {
     id: "5",
     title: "Bantaeng Office Smart Service (BOSS) V2",
     description:
-      "digital platform for streamlined public administration in Bantaeng, providing citizens with more accessible access to essential government services.",
+      "A modern digital office platform for managing administrative workflows, office information, agendas, and internal services at the Immigration Office Class III Non-TPI Bantaeng.",
+
     longDescription:
-      "Bantaeng Office Smart Service is a web-based platform that digitizes public administration tasks. It lets citizens submit service requests, track status updates in real time, and access government services securely — making public services faster, transparent, and more accessible.",
+      "Bantaeng Office Smart System (BOSS) is a web-based digital office platform developed to centralize administrative workflows, office information, agendas, documents, and internal services. It provides an integrated environment that helps the Immigration Office Class III Non-TPI Bantaeng manage daily operations more efficiently, securely, and systematically.",
     image: "/bossv21.png",
-    images: ["/bossv21.png", "/bossv24.png", "/bossv23.png", "/bossv25.png", "/bossv26.png", "/bossv27.png", "/bossv28.png", "/bossv29.png"],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Shadcn", "Tailwind CSS", "Supabase"],
+    images: [
+      "/bossv21.png",
+      "/bossv24.png",
+      "/bossv23.png",
+      "/bossv25.png",
+      "/bossv26.png",
+      "/bossv27.png",
+      "/bossv28.png",
+      "/bossv29.png",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Shadcn",
+      "Tailwind CSS",
+      "Supabase",
+    ],
     category: "web",
     liveUrl: "https://boss-bantaengv2.vercel.app/",
     githubUrl: "https://github.com/kholilullahhhh/rap",
