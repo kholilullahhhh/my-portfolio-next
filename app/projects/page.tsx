@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,13 +9,103 @@ import { Footer } from "@/components/common/footer";
 import TechIcon from "@/components/common/tech-icon";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 import { GradientFadedBackground } from "@/components/ui/gradient-faded-box";
 import { projects } from "@/lib/data";
 import { Project } from "@/types";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const categories = ["all", "web", "mobile"];
+
+function ProjectImageSlider({
+  title,
+  images,
+}: {
+  title: string;
+  images: string[];
+}) {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    const onSelect = (api: CarouselApi) => {
+      if (!api) return;
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+    return () => {
+      api?.off("select", onSelect);
+      api?.off("reInit", onSelect);
+    };
+  }, [api]);
+
+  const hasMultiple = images.length > 1;
+
+  return (
+    <div>
+      <Carousel
+        setApi={setApi}
+        opts={{ align: "start", loop: hasMultiple }}
+        className="w-full"
+      >
+        <CarouselContent className="ml-0">
+          {images.map((src, index) => (
+            <CarouselItem key={`${src}-${index}`} className="pl-0">
+              <div className="relative aspect-video rounded-lg overflow-hidden bg-black/50">
+                <Image
+                  src={src}
+                  alt={`${title} - image ${index + 1}`}
+                  fill
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  className="object-contain"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {hasMultiple && (
+          <>
+            <CarouselPrevious className="left-3 bg-black/50 text-white border-white/30 hover:bg-black/70 hover:text-white" />
+            <CarouselNext className="right-3 bg-black/50 text-white border-white/30 hover:bg-black/70 hover:text-white" />
+          </>
+        )}
+      </Carousel>
+      {hasMultiple && (
+        <div className="flex justify-center gap-2 mt-3">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              aria-label={`Go to image ${index + 1}`}
+              className={cn(
+                "h-2 w-2 rounded-full transition-colors",
+                index === current
+                  ? "bg-primary"
+                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50",
+              )}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -198,14 +288,14 @@ export default function ProjectsPage() {
                   transition={{ duration: 0.3 }}
                   className="space-y-6"
                 >
-                  <div className="relative aspect-video rounded-lg overflow-hidden">
-                    <Image
-                      src={selectedProject.image}
-                      alt={selectedProject.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <ProjectImageSlider
+                    title={selectedProject.title}
+                    images={
+                      selectedProject.images?.length
+                        ? selectedProject.images
+                        : [selectedProject.image]
+                    }
+                  />
 
                   <div>
                     <div className="flex items-start justify-between mb-4">

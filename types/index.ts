@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   longDescription: string;
   image: string;
+  images?: string[];
   technologies: string[];
   category: string;
   liveUrl?: string;
