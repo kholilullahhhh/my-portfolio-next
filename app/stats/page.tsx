@@ -10,16 +10,10 @@ import {
   BookMarked,
   CalendarDays,
   Clock,
-  GitBranch,
-  GitCommitVertical,
   GitFork,
-  GitPullRequest,
   Github,
   MapPin,
-  MessageSquare,
   RefreshCw,
-  Rocket,
-  Star,
   Users,
 } from "lucide-react";
 import {
@@ -33,35 +27,18 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
-} from "@/components/ui/chart";
 import { Footer } from "@/components/common/footer";
-import TechIcon from "@/components/common/tech-icon";
 import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 import { GradientFadedBackground } from "@/components/ui/gradient-faded-box";
 import {
   computeContributionStats,
-  describeEvent,
   fetchContributions,
-  fetchGitHubEvents,
-  fetchGitHubRepos,
   fetchGitHubUser,
   formatNumber,
-  getLanguageStats,
-  getTopRepos,
   GITHUB_USERNAME,
-  sumStars,
-  timeAgo,
   type ContributionStats,
-  type GitHubEvent,
-  type GitHubRepo,
   type GitHubUser,
 } from "@/lib/github";
-import { Pie, PieChart, Cell, Bar, BarChart, XAxis, YAxis } from "recharts";
 
 const GitHubCalendar = dynamic(
   () => import("react-github-calendar").then((m) => m.GitHubCalendar),
@@ -73,62 +50,16 @@ const GitHubCalendar = dynamic(
 
 const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
 
-const PIE_COLORS = [
-  "hsl(var(--chart-1))",
-  "hsl(var(--chart-2))",
-  "hsl(var(--chart-3))",
-  "hsl(var(--chart-4))",
-  "hsl(var(--chart-5))",
-];
-
-const languageConfig = {
-  language: { label: "Repos" },
-} satisfies ChartConfig;
-
-const topRepoConfig = {
-  stars: { label: "Stars", color: "hsl(var(--chart-1))" },
-} satisfies ChartConfig;
-
-function eventIcon(type: string) {
-  switch (type) {
-    case "PushEvent":
-      return <GitCommitVertical className="h-4 w-4 text-primary" />;
-    case "PullRequestEvent":
-    case "PullRequestReviewEvent":
-    case "PullRequestReviewCommentEvent":
-      return <GitPullRequest className="h-4 w-4 text-chart-2" />;
-    case "ForkEvent":
-      return <GitFork className="h-4 w-4 text-chart-3" />;
-    case "WatchEvent":
-      return <Star className="h-4 w-4 text-yellow-500" />;
-    case "IssuesEvent":
-    case "IssueCommentEvent":
-      return <MessageSquare className="h-4 w-4 text-chart-4" />;
-    case "CreateEvent":
-    case "DeleteEvent":
-      return <GitBranch className="h-4 w-4 text-chart-5" />;
-    case "ReleaseEvent":
-      return <Rocket className="h-4 w-4 text-primary" />;
-    default:
-      return <Activity className="h-4 w-4 text-muted-foreground" />;
-  }
-}
-
 function StatsSkeleton() {
   return (
     <div className="space-y-8">
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-        {Array.from({ length: 6 }).map((_, i) => (
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        {Array.from({ length: 4 }).map((_, i) => (
           <Skeleton key={i} className="h-28 rounded-lg" />
         ))}
       </div>
       <Skeleton className="h-32 rounded-lg" />
       <Skeleton className="h-[200px] rounded-lg" />
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Skeleton className="h-[320px] rounded-lg" />
-        <Skeleton className="h-[320px] rounded-lg" />
-      </div>
-      <Skeleton className="h-[360px] rounded-lg" />
     </div>
   );
 }
@@ -136,8 +67,6 @@ function StatsSkeleton() {
 export default function StatsPage() {
   const { resolvedTheme } = useTheme();
   const [user, setUser] = useState<GitHubUser | null>(null);
-  const [repos, setRepos] = useState<GitHubRepo[]>([]);
-  const [events, setEvents] = useState<GitHubEvent[]>([]);
   const [contribStats, setContribStats] = useState<ContributionStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -152,15 +81,11 @@ export default function StatsPage() {
     setError(null);
 
     try {
-      const [userData, repoData, eventData, contributionData] = await Promise.all([
+      const [userData, contributionData] = await Promise.all([
         fetchGitHubUser(),
-        fetchGitHubRepos(),
-        fetchGitHubEvents(),
         fetchContributions(),
       ]);
       setUser(userData);
-      setRepos(repoData);
-      setEvents(eventData);
       setContribStats(computeContributionStats(contributionData));
       setLastUpdated(new Date());
     } catch (err) {
@@ -177,15 +102,9 @@ export default function StatsPage() {
     return () => clearInterval(id);
   }, [loadData]);
 
-  const languages = getLanguageStats(repos);
-  const topRepos = getTopRepos(repos);
-  const totalStars = sumStars(repos);
-
   const statCards = user
     ? [
         { label: "Public Repos", value: formatNumber(user.public_repos), icon: BookMarked },
-        { label: "Followers", value: formatNumber(user.followers), icon: Users },
-        { label: "Total Stars", value: formatNumber(totalStars), icon: Star },
         {
           label: "Contributions (1y)",
           value: contribStats ? formatNumber(contribStats.lastYear) : "—",
@@ -270,7 +189,7 @@ export default function StatsPage() {
           ) : (
             <div className="space-y-8">
               {/* Stat cards */}
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                 {statCards.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -402,261 +321,6 @@ export default function StatsPage() {
                   </CardContent>
                 </Card>
               </motion.div>
-
-              {/* Charts */}
-              <div className="grid gap-6 lg:grid-cols-2">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                  <Card className="h-full">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Top Languages</CardTitle>
-                      <CardDescription>
-                        By number of public repositories
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      {languages.length === 0 ? (
-                        <p className="py-10 text-center text-sm text-muted-foreground">
-                          No language data available.
-                        </p>
-                      ) : (
-                        <>
-                          <ChartContainer
-                            config={languageConfig}
-                            className="mx-auto aspect-square max-h-[260px]"
-                          >
-                            <PieChart>
-                              <ChartTooltip content={<ChartTooltipContent />} />
-                              <Pie
-                                data={languages.slice(0, 5)}
-                                dataKey="value"
-                                nameKey="name"
-                                innerRadius={50}
-                                outerRadius={90}
-                                paddingAngle={3}
-                              >
-                                {languages.slice(0, 5).map((entry, index) => (
-                                  <Cell
-                                    key={entry.name}
-                                    fill={PIE_COLORS[index % PIE_COLORS.length]}
-                                  />
-                                ))}
-                              </Pie>
-                            </PieChart>
-                          </ChartContainer>
-                          <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-                            {languages.slice(0, 5).map((lang, index) => (
-                              <li
-                                key={lang.name}
-                                className="flex items-center gap-2 text-sm"
-                              >
-                                <span
-                                  className="h-2.5 w-2.5 shrink-0 rounded-[2px]"
-                                  style={{
-                                    backgroundColor:
-                                      PIE_COLORS[index % PIE_COLORS.length],
-                                  }}
-                                />
-                                <TechIcon
-                                  name={lang.name}
-                                  className="h-4 w-4 shrink-0"
-                                />
-                                <span>{lang.name}</span>
-                                <span className="text-muted-foreground">
-                                  {lang.value}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      )}
-                    </CardContent>
-                  </Card>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.35 }}
-                >
-                  <Card className="h-full">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Most Starred Repos</CardTitle>
-                      <CardDescription>Top repositories by stars</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      {topRepos.length === 0 ? (
-                        <p className="py-10 text-center text-sm text-muted-foreground">
-                          No repository data available.
-                        </p>
-                      ) : (
-                        <ChartContainer
-                          config={topRepoConfig}
-                          className="h-[280px] w-full"
-                        >
-                          <BarChart
-                            data={topRepos.map((r) => ({
-                              name:
-                                r.name.length > 16
-                                  ? `${r.name.slice(0, 16)}…`
-                                  : r.name,
-                              stars: r.stargazers_count,
-                            }))}
-                            layout="vertical"
-                            margin={{ left: 8, right: 16, top: 8, bottom: 8 }}
-                          >
-                            <XAxis type="number" hide />
-                            <YAxis
-                              type="category"
-                              dataKey="name"
-                              width={110}
-                              tickLine={false}
-                              axisLine={false}
-                              tick={{ fontSize: 11 }}
-                            />
-                            <ChartTooltip content={<ChartTooltipContent />} />
-                            <Bar
-                              dataKey="stars"
-                              fill="hsl(var(--chart-1))"
-                              radius={[0, 6, 6, 0]}
-                              barSize={18}
-                            />
-                          </BarChart>
-                        </ChartContainer>
-                      )}
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </div>
-
-              {/* Activity + top repos list */}
-              <div className="grid gap-6 lg:grid-cols-2">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                  <Card className="h-full">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-lg">
-                        <Activity className="h-5 w-5 text-primary" />
-                        Recent Activity
-                      </CardTitle>
-                      <CardDescription>
-                        Latest public events on GitHub
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      {events.length === 0 ? (
-                        <p className="py-10 text-center text-sm text-muted-foreground">
-                          No recent activity.
-                        </p>
-                      ) : (
-                        <ul className="space-y-3">
-                          {events.slice(0, 10).map((event) => (
-                            <li
-                              key={event.id}
-                              className="flex items-start gap-3 rounded-md border border-border/50 p-3 transition-colors hover:bg-muted/40"
-                            >
-                              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted">
-                                {eventIcon(event.type)}
-                              </span>
-                              <div className="min-w-0 flex-1">
-                                <p className="truncate text-sm">
-                                  {describeEvent(event)}
-                                </p>
-                                <p className="text-xs text-muted-foreground">
-                                  {timeAgo(event.created_at)}
-                                </p>
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </CardContent>
-                  </Card>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.45 }}
-                >
-                  <Card className="h-full">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-lg">
-                        <Star className="h-5 w-5 text-yellow-500" />
-                        Top Repositories
-                      </CardTitle>
-                      <CardDescription>
-                        Sorted by star count
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      {topRepos.length === 0 ? (
-                        <p className="py-10 text-center text-sm text-muted-foreground">
-                          No repositories found.
-                        </p>
-                      ) : (
-                        <ul className="space-y-3">
-                          {topRepos.map((repo) => (
-                            <li key={repo.id}>
-                              <a
-                                href={repo.html_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block rounded-md border border-border/50 p-3 transition-colors hover:bg-muted/40"
-                              >
-                                <div className="flex items-center justify-between gap-2">
-                                  <span className="truncate text-sm font-medium text-primary">
-                                    {repo.full_name}
-                                  </span>
-                                  <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
-                                    <Star className="h-3 w-3" />
-                                    {formatNumber(repo.stargazers_count)}
-                                    <GitFork className="ml-2 h-3 w-3" />
-                                    {formatNumber(repo.forks_count)}
-                                  </span>
-                                </div>
-                                {repo.description && (
-                                  <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">
-                                    {repo.description}
-                                  </p>
-                                )}
-                                <div className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
-                                  {repo.language && (
-                                    <span className="flex items-center gap-1">
-                                      <TechIcon
-                                        name={repo.language}
-                                        className="h-3 w-3"
-                                      />
-                                      {repo.language}
-                                    </span>
-                                  )}
-                                  <span>updated {timeAgo(repo.pushed_at)}</span>
-                                </div>
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                      <Button asChild variant="outline" size="sm" className="mt-4 w-full">
-                        <a
-                          href={`https://github.com/${GITHUB_USERNAME}?tab=repositories`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="mr-2 h-4 w-4" />
-                          All repositories
-                        </a>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </div>
             </div>
           )}
         </div>
