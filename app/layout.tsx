@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Fraunces, DM_Sans } from 'next/font/google';
+import { Fraunces, DM_Sans, JetBrains_Mono } from 'next/font/google';
 import { Providers } from '@/components/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { Navigation } from '@/components/common/navigation';
@@ -15,6 +15,12 @@ const fraunces = Fraunces({
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -95,7 +101,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${fraunces.variable} ${dmSans.variable} font-sans`}>
+      <body
+        className={`${fraunces.variable} ${dmSans.variable} ${jetBrainsMono.variable} font-sans`}
+      >
         <Providers
           attribute="class"
           defaultTheme="system"

@@ -165,7 +165,7 @@ export default function AboutPage() {
                           whileHover={{ scale: 1.05 }}
                         >
                           <Badge
-                            variant="secondary"
+                            variant="tech"
                             className="text-sm py-1 px-3 gap-1.5"
                           >
                             <TechIcon name={tech} className="w-4 h-4" />

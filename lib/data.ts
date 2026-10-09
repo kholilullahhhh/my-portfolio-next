@@ -144,6 +144,40 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/kholilullahhhh/rap",
     featured: true,
   },
+  {
+    id: "6",
+    title: "Retail Management System",
+
+    description:
+      "A modern retail management platform that streamlines inventory management, point-of-sale transactions, supplier purchases, and sales reporting in one integrated system.",
+
+    longDescription:
+      "Retail Management System is a web-based application designed to simplify and centralize daily supermarket operations. It integrates product and inventory management, point-of-sale (POS) transactions, supplier and purchase management, stock monitoring, and sales reporting into one platform. The system helps store owners and staff manage inventory more systematically, process transactions efficiently, monitor stock movements, and access operational insights to support better business decisions.",
+    image: "/swalay1.png",
+    images: [
+      "/swalay1.png",
+      "/swalay2.png",
+      "/swalay3.png",
+      "/swalay4.png",
+      "/swalay5.png",
+      "/swalay6.png",
+      "/swalay7.png",
+      "/swalay8.png",
+      "/swalay9.png",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Shadcn",
+      "Tailwind CSS",
+      "Supabase",
+    ],
+    category: "web",
+    liveUrl: "https://mangs-swalay.vercel.app/",
+    githubUrl: "https://github.com/kholilullahhhh/mangsSwalay",
+    featured: true,
+  },
 ];
 
 export const skills: Skill[] = [

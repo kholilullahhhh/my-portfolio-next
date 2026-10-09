@@ -217,7 +217,7 @@ export default function ProjectsPage() {
                         {project.technologies.slice(0, 3).map((tech) => (
                           <Badge
                             key={tech}
-                            variant="secondary"
+                            variant="tech"
                             className="text-xs flex items-center gap-1"
                           >
                             <TechIcon name={tech} className="w-3 h-3" />
@@ -225,7 +225,7 @@ export default function ProjectsPage() {
                           </Badge>
                         ))}
                         {project.technologies.length > 3 && (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant="tech" className="text-xs">
                             +{project.technologies.length - 3} more
                           </Badge>
                         )}
@@ -327,7 +327,7 @@ export default function ProjectsPage() {
                           {selectedProject.technologies.map((tech) => (
                             <Badge
                               key={tech}
-                              variant="secondary"
+                              variant="tech"
                               className="px-3 py-1 flex items-center gap-1.5"
                             >
                               <TechIcon name={tech} className="w-4 h-4" />
