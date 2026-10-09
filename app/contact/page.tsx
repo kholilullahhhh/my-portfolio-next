@@ -101,7 +101,8 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            <p className="eyebrow justify-center mb-5">Contact</p>
+            <h1 className="text-4xl sm:text-5xl mb-6">
               Get In Touch
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -120,7 +121,7 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold mb-6">Let's Talk</h2>
+                <h2 className="text-3xl mb-6">Let's Talk</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                   I'm always interested in discussing new opportunities,
                   creative projects, or simply connecting with fellow developers
@@ -145,7 +146,9 @@ export default function ContactPage() {
                             <info.icon className="h-6 w-6 text-primary" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="font-semibold mb-1">{info.title}</h3>
+                            <h3 className="meta uppercase tracking-[0.14em] text-muted-foreground mb-1.5">
+                              {info.title}
+                            </h3>
                             {info.href ? (
                               <a
                                 href={info.href}
@@ -220,7 +223,7 @@ export default function ContactPage() {
             >
               <Card className="p-8">
                 <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+                  <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
                   {isSubmitted && (
                     <motion.div

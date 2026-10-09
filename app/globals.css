@@ -65,8 +65,62 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   }
+
+  /* Display headings: Fraunces — brings contrast against the sans body */
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-primary/25 text-foreground;
+  }
+}
+
+/* ---- Typographic utilities ---------------------------------------- */
+
+/* Small mono kicker above a page/section title */
+.eyebrow {
+  @apply inline-flex items-center gap-2 font-mono text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-muted-foreground;
+}
+.eyebrow::before {
+  content: '';
+  @apply h-px w-6 bg-primary/60;
+}
+
+/* Numeric / date metadata — tabular so columns stay aligned */
+.meta {
+  @apply font-mono text-xs font-medium tabular-nums tracking-tight;
+}
+
+/* Big figures (stats, counters) */
+.figure {
+  @apply font-mono font-semibold tabular-nums tracking-tight;
+}
+
+/* Serif accent for a line or two inside body copy */
+.lede {
+  @apply font-display text-lg leading-relaxed;
 }
 
 /* Custom scrollbar */

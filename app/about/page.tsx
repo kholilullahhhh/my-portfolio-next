@@ -95,7 +95,8 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">About Me</h1>
+            <p className="eyebrow justify-center mb-5">About</p>
+            <h1 className="text-4xl sm:text-5xl mb-6">About Me</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               I am a passionate full-stack developer and an active student at
               <strong> Universitas Dipa Makassar</strong>, majoring in
@@ -115,7 +116,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-6"
             >
-              <h2 className="text-3xl font-bold mb-6">My Journey</h2>
+              <h2 className="text-3xl mb-6">My Journey</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Hi, my name is Muhammad Kholilullah. My journey into software
@@ -146,7 +147,7 @@ export default function AboutPage() {
             >
               <Card className="p-6">
                 <CardContent className="p-0">
-                  <h3 className="text-3xl font-bold mb-6">Tech Stack</h3>
+                  <h3 className="text-2xl font-semibold mb-6">Tech Stack</h3>
                   <div className="space-y-4">
                     <p className="text-muted-foreground">
                       I work with modern technologies to build scalable and
@@ -187,7 +188,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="pt-8 mb-16"
           >
-            <h2 className="text-3xl font-bold mb-6">Education</h2>
+            <h2 className="text-3xl mb-6">Education</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {highlights.map((highlight, index) => {
                 const Icon = highlight.icon;
@@ -205,7 +206,7 @@ export default function AboutPage() {
                         {highlight.label}
                       </h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="meta text-muted-foreground">
                       {highlight.year}
                     </p>
                     <p className="mt-2 text-muted-foreground">
@@ -224,7 +225,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="pt-8 mb-16"
           >
-            <h2 className="text-3xl font-bold mb-6">Organization</h2>
+            <h2 className="text-3xl mb-6">Organization</h2>
             <div className="grid grid-cols-1 gap-6">
               {organizations.map((org, index) => {
                 const Icon = org.icon;
@@ -240,7 +241,7 @@ export default function AboutPage() {
                       <Icon className="w-5 h-5 text-primary" />
                       <h4 className="font-semibold text-lg">{org.label}</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">{org.year}</p>
+                    <p className="meta text-muted-foreground">{org.year}</p>
                     <p className="mt-2 text-muted-foreground">
                       {org.description}
                     </p>
@@ -256,7 +257,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-center mb-12">
+            <h2 className="text-3xl text-center mb-12">
               Professional Timeline
             </h2>
             <div className="max-w-4xl mx-auto">
@@ -284,7 +285,7 @@ export default function AboutPage() {
                   >
                     <Card className="relative z-10 w-full p-4 sm:p-5 md:p-6 bg-background hover:shadow-lg transition-all duration-300">
                       <CardContent className="p-0">
-                        <div className="text-primary font-bold text-base sm:text-lg mb-1.5 sm:mb-2">
+                        <div className="meta text-primary text-sm sm:text-base mb-1.5 sm:mb-2">
                           {item.year}
                         </div>
 

@@ -127,7 +127,8 @@ export default function ProjectsPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            <p className="eyebrow justify-center mb-5">Work</p>
+            <h1 className="text-4xl sm:text-5xl mb-6">
               Featured Projects
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -207,7 +208,7 @@ export default function ProjectsPage() {
                       )}
                     </div>
                     <CardContent className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                      <h3 className="font-display text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
                         {project.title}
                       </h3>
                       <p className="text-muted-foreground mb-4 flex-1 leading-relaxed">
@@ -300,10 +301,10 @@ export default function ProjectsPage() {
                   <div>
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h2 className="text-3xl font-bold mb-2">
+                        <h2 className="text-3xl mb-2">
                           {selectedProject.title}
                         </h2>
-                        <Badge variant="outline" className="capitalize">
+                        <Badge variant="outline" className="meta capitalize">
                           {selectedProject.category}
                         </Badge>
                       </div>

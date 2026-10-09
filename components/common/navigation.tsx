@@ -46,7 +46,7 @@ export function Navigation() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-xl font-bold cursor-pointer"
+            className="font-display text-xl font-semibold tracking-tight cursor-pointer"
           >
             <Link href="/home" className="hover:text-primary transition-colors">
               Luluuu
@@ -60,7 +60,7 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 onClick={handleNavClick}
-                className={`transition-colors hover:text-primary ${
+                className={`text-sm tracking-wide transition-colors hover:text-primary ${
                   pathname === item.href 
                     ? 'text-primary font-medium' 
                     : 'text-muted-foreground hover:text-foreground'

@@ -133,7 +133,8 @@ export default function StatsPage() {
             transition={{ duration: 0.8 }}
             className="mb-10 text-center"
           >
-            <h1 className="mb-6 text-4xl font-bold sm:text-5xl">
+            <p className="eyebrow justify-center mb-5">Open Source</p>
+            <h1 className="mb-6 text-4xl sm:text-5xl">
               GitHub Dashboard
             </h1>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted-foreground">
@@ -141,7 +142,7 @@ export default function StatsPage() {
               activity.
             </p>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
-              <Badge variant="outline" className="gap-1.5">
+              <Badge variant="outline" className="meta gap-1.5">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
@@ -200,8 +201,8 @@ export default function StatsPage() {
                     <Card className="h-full">
                       <CardContent className="p-4">
                         <stat.icon className="mb-2 h-4 w-4 text-muted-foreground" />
-                        <div className="text-2xl font-bold">{stat.value}</div>
-                        <div className="text-xs text-muted-foreground">
+                        <div className="figure text-2xl">{stat.value}</div>
+                        <div className="meta mt-0.5 text-muted-foreground/90">
                           {stat.label}
                         </div>
                       </CardContent>
@@ -233,7 +234,7 @@ export default function StatsPage() {
                           <h2 className="text-xl font-semibold">
                             {user.name ?? user.login}
                           </h2>
-                          <Badge variant="secondary">@{user.login}</Badge>
+                          <Badge variant="tech">@{user.login}</Badge>
                           {user.hireable && (
                             <Badge className="bg-green-600 text-white">
                               Hireable
@@ -245,7 +246,7 @@ export default function StatsPage() {
                             {user.bio}
                           </p>
                         )}
-                        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                        <div className="meta mt-2 flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground">
                           {user.location && (
                             <span className="flex items-center gap-1">
                               <MapPin className="h-3 w-3" />

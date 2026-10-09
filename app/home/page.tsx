@@ -25,7 +25,7 @@ export default function HomePage() {
               className="text-center md:text-left mb-8 md:mb-0"
             >
               <motion.h2
-                className="text-lg text-muted-foreground max-w-xl mx-auto md:mx-0"
+                className="eyebrow mb-5 max-w-xl mx-auto md:mx-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -33,7 +33,7 @@ export default function HomePage() {
                 Hi, there...
               </motion.h2>
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -64,11 +64,11 @@ export default function HomePage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Undergraduate of Informatics Engineering at Universitas Dipa
-                Makassar. Enthusiastic about continuous learning and
-                <br />
-                building impactful
-                open source projects.
+                <span className="text-foreground font-medium">
+                  Undergraduate of Informatics Engineering
+                </span>{" "}
+                at Universitas Dipa Makassar. Enthusiastic about continuous
+                learning and building impactful open source projects.
               </motion.p>
 
               <motion.div
