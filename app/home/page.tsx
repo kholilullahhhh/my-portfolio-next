@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 import { GradientFadedBackground } from "@/components/ui/gradient-faded-box";
+import { ScrambleText } from "@/components/home/scramble-text";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import developerAnimation from "@/public/8-bit Cat.json";
@@ -17,29 +18,35 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative min-h-screen md:h-screen md:overflow-hidden px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-center md:justify-between max-w-7xl mx-auto gap-8 md:gap-0 py-8 md:py-0">
           {/* Left Content */}
-          <div className="relative z-10 w-full md:w-1/e md:h-full flex flex-col justify-center">
+          <div className="relative z-10 w-full md:w-1/2 md:h-full flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center md:text-left mb-8 md:mb-0"
             >
-              <motion.h2
+              <motion.p
                 className="eyebrow mb-5 max-w-xl mx-auto md:mx-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Hi, there...
-              </motion.h2>
+              </motion.p>
+
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
+                className="relative text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Kholilullah
+                  <ScrambleText
+                    text="Kholilullah"
+                    delay={400}
+                    speed={55}
+                    repeatInterval={7000}
+                  />
                 </span>
                 <br />
                 <TypeAnimation
@@ -83,6 +90,7 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
+
                 <Button asChild variant="outline" size="lg">
                   <Link href="/stats">Dashboard</Link>
                 </Button>
@@ -91,17 +99,12 @@ export default function HomePage() {
           </div>
 
           {/* Right Side Animation */}
-          <motion.div
-            className="flex w-full md:w-1/2 items-center justify-center mt-8 md:mt-0 md:h-full"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="w-full max-w-[480px] lg:max-w-[400px] xl:max-w-[600px] md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2">
+          <div className="relative z-10 flex w-full md:w-1/2 items-center justify-center mt-8 md:mt-0 md:h-full">
+            <div className="relative w-full max-w-[480px] lg:max-w-[400px] xl:max-w-[600px] md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2">
               <Lottie
                 animationData={developerAnimation}
                 loop={true}
-                className="w-full h-auto scale-110 md:scale-125" // Increased scale
+                className="w-full h-auto scale-110 md:scale-125"
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -109,17 +112,21 @@ export default function HomePage() {
                 }}
               />
             </div>
-          </motion.div>
+          </div>
 
           {/* Social Links - Fixed at bottom on desktop, inline on mobile */}
           <motion.div
-            className="w-full flex justify-center md:fixed md:bottom-8 md:left-0 md:right-0 md:w-auto mb-8 md:mb-0 z-50" // Added z-50
+            className="w-full flex justify-center md:fixed md:bottom-8 md:left-0 md:right-0 md:w-auto mb-8 md:mb-0 z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            style={{ pointerEvents: "auto" }} // Ensure clickable
+            style={{ pointerEvents: "auto" }}
           >
-            <div className="flex space-x-4 rounded-full p-2 border border-muted/50">
+            <motion.div
+              className="flex space-x-4 rounded-full p-2 border border-muted/50 bg-background/60 backdrop-blur-md"
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
               {[
                 {
                   icon: Github,
@@ -142,20 +149,20 @@ export default function HomePage() {
                   asChild
                   variant="ghost"
                   size="icon"
-                  className="rounded-full hover:bg-background/20" // Added hover effect
+                  className="rounded-full hover:bg-background/20"
                 >
                   <Link
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus:outline-none focus:ring-2 focus:ring-primary/50" // Added focus style
+                    className="focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
                     <social.icon className="h-5 w-5" />
                     <span className="sr-only">{social.label}</span>
                   </Link>
                 </Button>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         </section>
       </GradientFadedBackground>

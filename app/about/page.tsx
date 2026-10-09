@@ -285,7 +285,7 @@ export default function AboutPage() {
                   >
                     <Card className="relative z-10 w-full p-4 sm:p-5 md:p-6 bg-background hover:shadow-lg transition-all duration-300">
                       <CardContent className="p-0">
-                        <div className="meta text-primary text-sm sm:text-base mb-1.5 sm:mb-2">
+                        <div className="text-primary font-bold text-base sm:text-lg mb-1.5 sm:mb-2">
                           {item.year}
                         </div>
 

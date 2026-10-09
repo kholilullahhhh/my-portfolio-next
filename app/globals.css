@@ -180,6 +180,30 @@ html {
   animation: spin-slow 3s linear infinite;
 }
 
+/* Home: text scramble glitch layers */
+@keyframes glitch-a {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 55% 0);
+  }
+  50% {
+    transform: translate(-2px, -1px);
+    clip-path: inset(0 0 45% 0);
+  }
+}
+@keyframes glitch-b {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    clip-path: inset(45% 0 0 0);
+  }
+  50% {
+    transform: translate(2px, 1px);
+    clip-path: inset(55% 0 0 0);
+  }
+}
+
 /* Gradient text */
 .gradient-text {
   @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
